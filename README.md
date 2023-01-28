@@ -17,6 +17,6 @@
 
 ## Netlify
 
-- **https://blues-foods.netlify.app**
+- **https://kala-kreatif-ecommerce.netlify.app**
 
 
