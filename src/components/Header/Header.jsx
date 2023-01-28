@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { Cartcontext, CartState } from "../../Context/Contex";
 import "./Header.css";
 
 const Header = () => {
     const [Toggle, menu] = useState(false)
+    
+    const Globalstate = useContext(Cartcontext);
+    const state = Globalstate.state;
+
+    const total = state.reduce((total, product) => {
+      return total + product.quantity;
+    },0)
   return (
     <>
       <header>
@@ -39,10 +47,12 @@ const Header = () => {
           </ul>
           <div className="nav-cart">
             {/* <span>{cart.length}</span> */}
-            <span>0</span>
+            <span>{total}</span>
             <Link to="/cart">
               {/* <img src={CartIcon} alt="" width="20" /> */}
-              <i className="fas fa-shopping-cart"></i>
+              <i className="fas fa-shopping-cart">
+              <Link to="/cart"></Link>
+              </i>
             </Link>
           </div>
         </nav>

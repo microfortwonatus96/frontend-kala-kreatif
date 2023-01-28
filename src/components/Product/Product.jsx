@@ -29,17 +29,17 @@ const Product = () => {
       });
   }, []);
 
-  const Globalstate = useContext(Cartcontext)
-  console.log(Globalstate)
+  const Globalstate = useContext(Cartcontext);
+  const dispatch = Globalstate.dispatch;
+  console.log("dis:", Globalstate);
 
   return (
     <div>
-      
-
       <div className="container">
         <div className="grid__img">
           {AllProduct &&
             AllProduct.map((product) => {
+              product.quantity = 1;
               return (
                 <>
                   {/* All-Products-Data */}
@@ -56,12 +56,24 @@ const Product = () => {
                       <h4>{product.title}</h4>
                       <h4>${product.price}</h4>
                     </div>
+
                     <div key={product.id}>
                       <Link
-                        className="btn__detail"
+                        className="detail__click"
                         to={`/detail-product/${product.id}`}
                       >
                         Detail
+                      </Link>
+                    </div>
+
+                    <div>
+                      <Link
+                        className="btn__detail"
+                        onClick={() =>
+                          dispatch({ type: "ADD", payload: product })
+                        }
+                      >
+                        Add to Cart
                       </Link>
                     </div>
                   </div>

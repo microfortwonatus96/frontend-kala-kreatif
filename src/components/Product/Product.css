@@ -203,6 +203,15 @@
     transition: all 0.3s ease;
 }
 
+.detail__click{
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #0077ff;
+    font-size: 12px;
+    color: #fff;
+
+}
+
 .main__wrapper .container__detail .product__div .product__div-right .btn__groups-detail button .fas{
     margin-right: 8px;
 }

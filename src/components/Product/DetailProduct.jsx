@@ -1,10 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 import "./Product.css";
-import { Cartcontext } from "../../Context/Contex";
 
 const DetailProduct = () => {
   const [DetailProduct, setDetailProduct] = useState("");
@@ -22,10 +20,7 @@ const DetailProduct = () => {
       .catch((error) => {
         console.error(error);
       });
-  },);
-
-  const Globalstate = useContext(Cartcontext)
-  const dispatch = Globalstate.dispatch;
+  });
 
   return (
     <>
@@ -106,9 +101,6 @@ const DetailProduct = () => {
                 Dolores, illo!
               </p>
               <div className="btn__groups-detail">
-                <button onClick={()=>dispatch({type: "ADD", payload: DetailProduct})} className="add__cart-btn" type="button">
-                  <i className="fas fa-shopping-cart"></i>Add to Cart
-                </button>
                 <button className="buy__now-btn" type="button">
                   <i className="fas fa-wallet"></i>Buy Now
                 </button>
