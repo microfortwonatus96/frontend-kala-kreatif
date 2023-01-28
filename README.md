@@ -10,7 +10,7 @@
 
 1. **npm install (If npm is already installed, make sure there is a node_modules folder)**
 2. **npm start**
-## Netlify
+## how to login
 
 - **username: atuny0**
 - **password: 9uQFF1Lh**
