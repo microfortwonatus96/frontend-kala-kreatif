@@ -4,59 +4,49 @@ import { Cartcontext, CartState } from "../../Context/Contex";
 import "./Header.css";
 
 const Header = () => {
-    const [Toggle, menu] = useState(false)
-    
-    const Globalstate = useContext(Cartcontext);
-    const state = Globalstate.state;
+  
+  // const bar = {clicked:false};
 
-    const total = state.reduce((total, product) => {
-      return total + product.quantity;
-    },0)
+  // const handleClick = () => {
+  //   this.setBar({clicked: !this.bar.clicked});
+  // }
+  const [Toggle, showMenu] = useState(false)
+  const Globalstate = useContext(Cartcontext);
+  const state = Globalstate.state;
+
+  const total = state.reduce((total, product) => {
+    return total + product.quantity;
+  }, 0);
   return (
     <>
-      <header>
-        {/* <div className="menu"> */}
-        <div className={Toggle ? "menu" : "menu"}>
-          {/* <img src={Menu} alt="" width="20" /> */}
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <div className="logo">
-          <h1>
-            <Link to="/">KalaKreatif</Link>
-          </h1>
-        </div>
-        <nav>
-          <ul >
+      <nav>
+        <div className="header__logo">KalaKreatif</div>
+
+        <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
+          <ul className="navbar">
             <li>
-              <Link to="/">Home</Link>
-            </li>
-           
-            <li>
-              <Link to="/contact">Contact</Link>
+              <a href="/">Home</a>
             </li>
             <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/login">Logout</Link>
-            </li>
-            <li className="close"  onClick={() => menu(!Toggle)} >
-              {/* <img src={Close} alt="" width="20" /> */}
-              <i class="fa-solid fa-xmark"></i>
-            </li>
+              <a href="/login">Logout</a>
+            </li>           
+            <div className="nav-cart">
+              <span>{total}</span>
+
+              <Link to="/cart">
+                <i className="fas fa-shopping-cart">
+                  <Link to="/cart"></Link>
+                </i>
+              </Link>
+            </div>
           </ul>
-          <div className="nav-cart">
-            {/* <span>{cart.length}</span> */}
-            <span>{total}</span>
-            <Link to="/cart">
-              {/* <img src={CartIcon} alt="" width="20" /> */}
-              <i className="fas fa-shopping-cart">
-              <Link to="/cart"></Link>
-              </i>
-            </Link>
-          </div>
-        </nav>
-      </header>
+          <i className="fas fa-times nav__close" onClick={() => showMenu(!Toggle)}></i>
+        </div>
+
+        <div id="mobile" className="nav__toggle" onClick={() => showMenu(!Toggle)}>
+          <i className= "fas fa-bars"></i>
+        </div>
+      </nav>
     </>
   );
 };

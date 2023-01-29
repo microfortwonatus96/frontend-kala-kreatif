@@ -1,58 +1,64 @@
-import React, { useState } from "react";
-import './head.css'
+// import React, { useContext, useState } from "react";
+// import { Link } from "react-router-dom";
+// import { Cartcontext, CartState } from "../../Context/Contex";
+// import "./Header.css";
 
-const Head = () => {
-    const [Toggle, showMenu] = useState(false)
-  return (
-    <>
-    <header className="header">
-      <nav className="nav container">
-        <a href="index.html" className="nav__logo">
-          <div className="logo__img">Kala Kreatif</div>
-        </a>
+// const Head = () => {
+//     const [Toggle, menu] = useState(false)
+    
+//     const Globalstate = useContext(Cartcontext);
+//     const state = Globalstate.state;
 
-        <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
-          <ul className="nav__list gird">
-            <li className="nav__item">
-              <a href="#home" className="nav__link active-link">
-                <i className="uil uil-estate nav__icon"></i>Home
-              </a>
-            </li>
+//     const total = state.reduce((total, product) => {
+//       return total + product.quantity;
+//     },0)
+//   return (
+//     <>
+//       <header>
+//         {/* <div className="menu"> */}
+//         <div className={Toggle ? "menu" : "menu"}>
+//           {/* <img src={Menu} alt="" width="20" /> */}
+//           <i class="fa-solid fa-bars"></i>
+//         </div>
+//         <div className="logo">
+//           <h1>
+//             <Link to="/">KalaKreatif</Link>
+//           </h1>
+//         </div>
+//         <nav>
+//           <ul >
+//             <li>
+//               <Link to="/">Home</Link>
+//             </li>
+           
+//             <li>
+//               <Link to="/contact">Contact</Link>
+//             </li>
+//             <li>
+//               <Link to="/about">About</Link>
+//             </li>
+//             <li>
+//               <Link to="/login">Logout</Link>
+//             </li>
+//             <li className="close"  onClick={() => menu(!Toggle)} >
+//               {/* <img src={Close} alt="" width="20" /> */}
+//               <i class="fa-solid fa-xmark"></i>
+//             </li>
+//           </ul>
+//           <div className="nav-cart">
+//             {/* <span>{cart.length}</span> */}
+//             <span>{total}</span>
+//             <Link to="/cart">
+//               {/* <img src={CartIcon} alt="" width="20" /> */}
+//               <i className="fas fa-shopping-cart">
+//               <Link to="/cart"></Link>
+//               </i>
+//             </Link>
+//           </div>
+//         </nav>
+//       </header>
+//     </>
+//   );
+// };
 
-            <li className="nav__item">
-              <a href="#about" className="nav__link ">
-                <i className="uil uil-user nav__icon"></i>About
-              </a>
-            </li>
-
-            <li className="nav__item">
-              <a href="#galery" className="nav__link">
-                <i className="uil uil-file-alt nav__icon"></i>Galery
-              </a>
-            </li>
-
-            <li className="nav__item">
-              <a href="#team" className="nav__link">
-                <i className="uil uil-briefcase-alt nav__icon"></i>Our Team
-              </a>
-            </li>
-
-            <li className="nav__item">
-              <a href="#contact" className="nav__link">
-                <i className="uil uil-message nav__icon"></i>Contact Us
-              </a>
-            </li>
-          </ul>
-
-          <i className="uil uil-times nav__close" onClick={() => showMenu(!Toggle)}></i>
-        </div>
-        <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
-          <i className="uil uil-apps"></i>
-        </div>
-      </nav>
-    </header>
-    </>
-  )
-}
-
-export default Head
+// export default Head;
