@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-// import Footer from './component/Footer/Footer';
 import Product from './components/Product/Product';
 import Header from './components/Header/Header';
 import Login from './components/Login/Login';
 import DetailProduct from './components/Product/DetailProduct';
 import { Context } from './Context/Contex';
 import Cart from './components/Cart/Cart';
+import Footer from './components/Footer/Footer';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       <>
         <Header />
         <Outlet />
-        {/* <Footer /> */}
+        <Footer />
       </>
     ),
     errorElement: <p>Page Not Found</p>,

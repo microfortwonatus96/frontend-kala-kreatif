@@ -3,8 +3,13 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;
+    padding: 20px 120px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+}
+
+nav .header__logo{
+    text-transform: uppercase;
+    color: #fff;
 }
 
 .navbar{
@@ -54,6 +59,13 @@ nav .nav-cart span {
     border-radius: 50%;
     z-index: 1;
 }
+
+.nav__icon, .nav__close, .nav__toggle{
+    display: none;
+}
+
+/*============================== Responsive Media Screen ============================== */
+
 
 @media screen and (max-width: 768px) {
     .header{
