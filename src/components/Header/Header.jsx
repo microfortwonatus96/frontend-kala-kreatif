@@ -1,15 +1,9 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { Cartcontext, CartState } from "../../Context/Contex";
+import { Cartcontext} from "../../Context/Contex";
 import "./Header.css";
 
 const Header = () => {
-  
-  // const bar = {clicked:false};
-
-  // const handleClick = () => {
-  //   this.setBar({clicked: !this.bar.clicked});
-  // }
   const [Toggle, showMenu] = useState(false)
   const Globalstate = useContext(Cartcontext);
   const state = Globalstate.state;
@@ -20,7 +14,7 @@ const Header = () => {
   return (
     <>
       <nav>
-        <div className="header__logo">KalaKreatif</div>
+        <div className="header__logo">Kala Kreatif</div>
 
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="navbar">

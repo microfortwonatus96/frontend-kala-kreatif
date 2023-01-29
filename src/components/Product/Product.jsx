@@ -36,6 +36,7 @@ const Product = () => {
   return (
     <div>
       <div className="container">
+        <h1 className="title__product">Product</h1>
         <div className="grid__img">
           {AllProduct &&
             AllProduct.map((product) => {
