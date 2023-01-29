@@ -37,38 +37,6 @@ const DetailProduct = () => {
                   alt="All Products"
                 />
               </div>
-              {/* <div className="hover__container">
-                <div>
-                  <img
-                    className="img__detail"
-                    src={DetailProduct.thumbnail}
-                    alt="All Products"
-                  />
-                </div>
-
-                <div>
-                  <img
-                    className="img__detail"
-                    src={DetailProduct.thumbnail}
-                    alt="All Products"
-                  />
-                </div>
-
-                <div>
-                  <img
-                    className="img__detail"
-                    src={DetailProduct.thumbnail}
-                    alt="All Products"
-                  />
-                </div>
-                <div>
-                  <img
-                    className="img__detail"
-                    src={DetailProduct.thumbnail}
-                    alt="All Products"
-                  />
-                </div>
-              </div> */}
             </div>
 
             {/********** right  ***************/}

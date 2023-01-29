@@ -9,10 +9,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 22px  rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 6px;
+
   }
   .cart .card img {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
   }
   .cart .card p {
     width: 200px;
@@ -32,4 +36,9 @@
   .cart .total {
     text-align: right;
     border-top: 1px solid black;
+  }
+
+  .card h2{
+    cursor: pointer;
+    color: #ccc;
   }

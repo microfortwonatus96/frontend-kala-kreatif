@@ -1,8 +1,10 @@
 
 .copyright{
+    position: relative;
     background-color: #ff9f00;;
     text-align: center;
     padding:1em;
-    margin-bottom: 0px;
     color: #fff;
+    width: 100%;
+
 }
